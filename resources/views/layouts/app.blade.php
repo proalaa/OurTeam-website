@@ -40,13 +40,13 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link {{ (request()->is('/')) ? 'active' : ''}} " href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
+              <a class="nav-link {{ (request()->is('about*')) ? 'active' : ''}} " href="about">About</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="services" id="dropdown04" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle {{ (request()->is('services*')) ? 'active' : ''}}" href="services" id="dropdown04" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Services</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="#">Branding</a>
@@ -56,10 +56,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio">Portfolio</a>
+              <a class="nav-link {{ (request()->is('portfolio*')) ? 'active' : ''}}" href="portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact">Contact</a>
+              <a class="nav-link {{ (request()->is('contact*')) ? 'active' : ''}}" href="contact">Contact</a>
             </li>
           </ul>
 
