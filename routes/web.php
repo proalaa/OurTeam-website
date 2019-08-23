@@ -12,5 +12,40 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $date = array(
+        'title'=>'Home',
+        'info'=>'WE ARE CREATIVE AGENCY'
+    );
+
+    return view('pages.index')->with('date' ,$date);
+});
+
+Route::get('about' , function(){
+    $date = array(
+        'title'=>'About',
+        'info'=>'About'
+    );
+    return view('pages.about')->with('date' , $date);
+});
+
+Route::get('portfolio' , function(){
+    $date = array(
+        'title'=>'Portfolio',
+        'info'=>'Portfolio'
+    );
+    return view('pages.portfolio')->with('date' , $date);
+});
+Route::get('contact' , function(){
+    $date = array(
+        'title'=>'Contact',
+        'info'=>'Contact'
+    );
+    return view('pages.contact')->with('date' , $date);
+});
+Route::get('services' , function(){
+    $date = array(
+        'title'=>'Services',
+        'info'=>'Services'
+    );
+    return view('pages.services')->with('date' , $date);
 });
